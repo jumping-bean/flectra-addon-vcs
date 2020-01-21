@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data noupdate="1">
+
+        <record id="payment.payment_acquirer_vcsweb" model="payment.acquirer">
+            <field name="name">VCSWeb</field>
+            <field name="image" type="base64" file="payment_vcsweb/static/src/img/vcsweb_icon.png"/>
+            <field name="provider">vcsweb</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="payment_vcsweb.vcsweb_form"/>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the PayGate website after clicking on payment button.</p>]]></field>
+            <field name="vcsweb_terminal_id">12345</field>
+            <field name="vcsweb_md5_secret">****</field>
+            <field name="vcsweb_personal_authentication_message">****</field>
+        </record>
+
+    </data>
+</flectra>

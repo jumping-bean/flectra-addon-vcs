@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data noupdate="1">
+        <template id="vcsweb_form">
+            <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+            <input type="hidden" name="p1" t-att-value="terminal_id"/>
+            <input type="hidden" name="p2" t-att-value="tx_reference_no"/>
+            <input type="hidden" name="p3" t-att-value="tx_description"/>
+            <input type="hidden" name="p4" t-att-value="tx_amount"/>
+            <input type="hidden" name="p5" t-att-value="tx_currency"/>
+            <input type="hidden" name="hash" t-att-value="tx_hash"/>
+            <input type="hidden" name="m_1" t-att-value="return_url"/>
+            <input type="hidden" name="CustomerID" t-att-value="customer_id"/>
+            <input type="hidden" name="p10" t-att-value="cancelled_url"/>
+            <input type="hidden" name="UrlsProvided" t-att-value="urls_provided"/>
+            <input type="hidden" name="CardholderName" t-att-value="customer_name"/>
+            <input type="hidden" name="CardholderEmail" t-att-value="customer_email"/>
+            <input type="hidden" name="ApprovedUrl" t-att-value="approved_url"/>
+            <input type="hidden" name="DeclinedUrl" t-att-value="declined_url"/>
+        </template>
+    </data>
+</flectra>

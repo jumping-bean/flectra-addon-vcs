@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <data>
+
+        <record id="acquirer_form_vcsweb" model="ir.ui.view">
+            <field name="name">acquirer.form.vcsweb</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.acquirer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="acquirer"]' position='after'>
+                    <group attrs="{'invisible': [('provider', '!=', 'vcsweb')]}">
+                        <field name="vcsweb_terminal_id"/>
+                        <field name="vcsweb_md5_secret" password="True"/>
+                        <field name="vcsweb_personal_authentication_message" password="True"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</flectra>
