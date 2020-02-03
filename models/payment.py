@@ -93,7 +93,10 @@ class TxVCSWeb(models.Model):
         elif len(tx) > 1:
             error_msg = _('VCSWeb: received data for reference %s; multiple orders found') % (reference)
             raise ValidationError(error_msg)
-        #check hash
+        #check hash - just redisplay transaction
+        if data.get("p3","") == '~MD5 Hash mismatch':
+            _logger.info("acquirer found hash mismatch on input data")
+            return tx
         hash = data.get("Hash",None)
         if hash:
             calculated_hash = tx.acquirer_id._calculate_vcsweb_hash('in', data)
