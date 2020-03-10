@@ -27,19 +27,19 @@ class AcquirerVCSWeb(models.Model):
             raise Exception("Type must be 'in' or 'out'")
 
         if inout == "out":
-            str=values["terminal_id"]+values["tx_reference_no"]+values["tx_description"]+values["tx_amount"]+values["tx_currency"]
-            str+=values["cancelled_url"]+values['customer_email'] +values["return_url"]+ values["customer_id"]
-            str+=self.vcsweb_md5_secret
+            params=values["terminal_id"]+values["tx_reference_no"]+values["tx_description"]+values["tx_amount"]+values["tx_currency"]
+            params+=values["cancelled_url"]+values['customer_email'] +values["return_url"]+ values["customer_id"]
+            params+=self.vcsweb_md5_secret
         else:
             keys = ['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12',"pam","m_1","CardHolderIpAddr","CardholderIpAddr","MaskedCardNumber","TransactionType","CustomerID",'MerchantToken']
-            str = ''
+            params = ''
             for key in keys:
                 if key == "pam":
-                    str=str+self.vcsweb_personal_authentication_message
+                    params=params+self.vcsweb_personal_authentication_message
                 elif key in values:
-                    str = str + values[key]
-            str= str + self.vcsweb_md5_secret
-        return hashlib.md5(str.encode()).hexdigest()
+                    params = params + values[key]
+            params= params + self.vcsweb_md5_secret
+        return hashlib.md5(params.encode()).hexdigest()
 
 
     def _get_vcsweb_urls(self):
