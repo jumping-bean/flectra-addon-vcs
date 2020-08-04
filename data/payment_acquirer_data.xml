@@ -9,7 +9,7 @@
             <field name="company_id" ref="base.main_company"/>
             <field name="view_template_id" ref="payment_vcsweb.vcsweb_form"/>
             <field name="pre_msg"><![CDATA[
-<p>You will be redirected to the PayGate website after clicking on payment button.</p>]]></field>
+<p>You will be redirected to the PayGate website after clicking on the payment button.</p>]]></field>
             <field name="vcsweb_terminal_id">12345</field>
             <field name="vcsweb_md5_secret">****</field>
             <field name="vcsweb_personal_authentication_message">****</field>
