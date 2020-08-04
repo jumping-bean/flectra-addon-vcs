@@ -12,7 +12,7 @@
     'author': "Jumping Bean",
     'website': "http://www.jumpingbean.co.za",
     'category': 'Accounting',
-    'version': '1.0',
+    'version': '1.1',
     'license': 'LGPL-3'
 
     # any module necessary for this one to work correctly
