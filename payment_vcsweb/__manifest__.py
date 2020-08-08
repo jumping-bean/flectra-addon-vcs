@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "payment_vcsweb",
 
@@ -14,13 +13,7 @@
     'category': 'Accounting',
     'version': '1.0',
     'license': 'LGPL-3',
-
-    # any module necessary for this one to work correctly
-    'depends': ['payment'],
-
-    # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
         'views/payment_views.xml',
         'views/payment_vcsweb_templates.xml',
         'data/payment_acquirer_data.xml',
