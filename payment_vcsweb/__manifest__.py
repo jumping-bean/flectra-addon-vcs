@@ -13,6 +13,7 @@
     'category': 'Accounting',
     'version': '1.0',
     'license': 'LGPL-3',
+    'depends': ['payment'],
     'data': [
         'views/payment_views.xml',
         'views/payment_vcsweb_templates.xml',
